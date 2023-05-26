@@ -1,0 +1,8 @@
+main() {
+    var x,y,z;
+    x = input;
+    y = alloc 0;
+    *y = x;
+    z = &y;
+    return x;
+}
