@@ -6,3 +6,4 @@ out/
 /target
 /project
 .DS_Store
+.bsp
