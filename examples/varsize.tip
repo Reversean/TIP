@@ -1,0 +1,20 @@
+foo() {
+    var a,b,c,d,e;
+    a = 0;
+    b = a - 1;
+    c = 65535;
+    d = 65536;
+    e = c - d;
+    return a;
+}
+
+main() {
+    var f,g,h;
+    f = input;
+    g = input;
+    h = g > f;
+    while(h) {
+        f = f * g;
+    }
+    return f;
+}
