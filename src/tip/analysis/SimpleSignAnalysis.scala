@@ -86,8 +86,7 @@ class SimpleSignAnalysis(cfg: ProgramCfg)(implicit declData: DeclarationData) ex
         r.data match {
           // var declarations
           case varr: AVarStmt =>
-            varr.declIds.foreach(id => s.+((id, SignLattice.bottom)))
-            s
+            s ++ varr.declIds.map { it => (it, SignLattice.bottom) }.toMap
 
           // assignments
           case AAssignStmt(id: AIdentifier, right, _) => s.updated(id, eval(right, s))
